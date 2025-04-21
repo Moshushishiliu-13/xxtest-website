@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国际疗愈行业协会精品课程 - 身心灵成长与能量疗愈</title>
+    <meta name="description" content="汇集国际疗愈行业协会29门精品课程，助您开启身心灵成长之旅，掌握能量疗愈技术，成为专业治疗师。">
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- 引入FontAwesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 引入Google字体 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c9baea25d725c559af7804b843e66556";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <style>
+        :root {
+            /* 主色调 */
+            --primary-color: #775ADA;
+            --primary-light: #9B88E3;
+            --primary-dark: #5D3FD3;
+            
+            /* 辅助色调 */
+            --accent-color: #FF6B6B;
+            --success-color: #4CAF50;
+            --warning-color: #FFC107;
+            
+            /* 背景与文字 */
+            --bg-color: #F8F9FA;
+            --card-bg: #FFFFFF;
+            --text-color: #333333;
+            --text-light: #6C757D;
+            
+            /* 暗色模式 */
+            --dark-bg: #121212;
+            --dark-card: #1E1E1E;
+            --dark-text: #E0E0E0;
+            
+            /* 其他 */
+            --border-radius: 10px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            position: relative;
+        }
+        
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        header h1 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            background-color: rgba(119, 90, 218, 0.1);
+            transition: var(--transition);
+            margin-top: 10px;
+        }
+        
+        .back-to-home i {
+            margin-right: 6px;
+        }
+        
+        .back-to-home:hover {
+            background-color: rgba(119, 90, 218, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        main {
+            margin-bottom: 40px;
+        }
+        
+        .login-info {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            box-shadow: var(--box-shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .login-info p {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .login-info i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .login-info strong {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin: 0 5px;
+        }
+        
+        .course-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .course-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 500;
+        }
+        
+        .course-table td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .course-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .course-table tr:hover {
+            background-color: rgba(119, 90, 218, 0.05);
+        }
+        
+        .course-icon {
+            width: 60px;
+            text-align: center;
+        }
+        
+        .course-icon i {
+            font-size: 24px;
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(119, 90, 218, 0.1);
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+        
+        .course-name {
+            width: 20%;
+            font-weight: 500;
+            color: var(--primary-dark);
+        }
+        
+        .course-desc {
+            width: 60%;
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+        .course-action {
+            width: 10%;
+            text-align: center;
+        }
+        
+        .btn-details {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 14px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-details:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(93, 63, 211, 0.3);
+        }
+        
+        footer {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        footer p {
+            margin: 10px 0;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            margin: 0 15px;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .footer-links a i {
+            font-size: 1em;
+            margin-right: 6px;
+            color: var(--primary-color);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: #0077ED;
+        }
+        
+        @media (max-width: 768px) {
+            .course-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .course-name {
+                width: 25%;
+            }
+            
+            .course-desc {
+                width: 50%;
+            }
+            
+            header {
+                padding: 20px;
+            }
+        }
+        
+        /* 添加深色模式支持 */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: var(--dark-bg);
+                --card-bg: var(--dark-card);
+                --text-color: var(--dark-text);
+            }
+            
+            body {
+                background-color: var(--dark-bg);
+            }
+            
+            header {
+                background-color: rgba(28, 28, 30, 0.8);
+            }
+            
+            .course-table {
+                background-color: var(--dark-card);
+            }
+            
+            .course-table tr:hover {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+            
+            footer {
+                background-color: var(--dark-card);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-spa"></i> 国际疗愈行业协会精品课程</h1>
+            <div class="subtitle">探索身心灵奥秘·掌握专业疗愈技术·成就更好的自己</div>
+            <a href="../index.html" class="back-to-home"><i class="fas fa-arrow-left"></i>返回主站</a>
+        </header>
+        
+        <main>
+            <div class="login-info">
+                <p><i class="fas fa-info-circle"></i> 共 <strong>29</strong> 个专业认证课程，均可在线报名学习，完成课程可获得国际认证证书。</p>
+            </div>
+            
+            <table class="course-table">
+                <thead>
+                    <tr>
+                        <th class="course-icon">图标</th>
+                        <th class="course-name">课程名称</th>
+                        <th class="course-desc">课程简介</th>
+                        <th class="course-action">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-cards-blank"></i></td>
+                        <td class="course-name">OH卡牌疗愈课程</td>
+                        <td class="course-desc">OH卡疗愈师课程教授潜意识投射卡（OH Cards）解读技术，结合心理学原理，帮助个体探索内心世界、释放情绪，促进自我成长与疗愈。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-lightbulb"></i></td>
+                        <td class="course-name">生命认识觉醒课程</td>
+                        <td class="course-desc">生命觉醒课程通过探索生命起源、意义与价值‌，结合情绪疗愈技术，帮助学员觉察自我限制，重新定义人生目标，激发生命潜能。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-hands-holding-circle"></i></td>
+                        <td class="course-name">灵气疗愈课程</td>
+                        <td class="course-desc">灵气疗愈师课程教授能量传递与平衡技术，涵盖灵气历史、理论基础及实操方法，帮助学员激活自愈能力，促进身心灵平衡。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-mandolin"></i></td>
+                        <td class="course-name">曼陀罗疗愈课程</td>
+                        <td class="course-desc">曼陀罗疗愈课程是以曼陀罗几何图案为媒介，结合冥想、色彩心理学原理，通过绘制与观想过程平衡脑波，达到身心放松与整合。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-people-roof"></i></td>
+                        <td class="course-name">家庭婚姻情感疗愈</td>
+                        <td class="course-desc">家庭婚姻情感疗愈师课程旨在帮助家庭成员解决情感问题，修复关系，涵盖沟通技巧、情绪管理、冲突解决等实用技能与方法。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-brain"></i></td>
+                        <td class="course-name">催眠疗愈课程</td>
+                        <td class="course-desc">催眠疗愈课程通过科学催眠技术引导深度放松，释放压力与潜意识阻碍，帮助个体改变限制性信念，促进心灵成长与自我突破。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-ear-listen"></i></td>
+                        <td class="course-name">心理倾听疗愈课程</td>
+                        <td class="course-desc">心理倾听疗愈课程培养专业倾听技能，包括同理心建立、提问技巧、非语言沟通等内容，帮助学员成为情感支持与心理疗愈的引导者。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-hourglass"></i></td>
+                        <td class="course-name">沙盘游戏疗愈师课程</td>
+                        <td class="course-desc">本课程以荣格分析心理学为理论基础，通过非语言的沙盘游戏方式，帮助个体表达内心世界，整合潜意识内容，促进心灵成长与疗愈。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-chalkboard-user"></i></td>
+                        <td class="course-name">家庭教育指导</td>
+                        <td class="course-desc">家庭教育指导师课程通过教授儿童发展心理学、教育学、沟通技巧等内容，帮助家长建立积极的教养方式，促进亲子关系与家庭和谐。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <!-- 添加剩余的21个课程 -->
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-music"></i></td>
+                        <td class="course-name">音乐疗愈技术课程</td>
+                        <td class="course-desc">音乐疗愈技术课程教授声音振动疗法原理，结合音频工程、心理学和东西方音乐疗法，帮助学员掌握音乐干预技术促进身心健康。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-seedling"></i></td>
+                        <td class="course-name">芳香植物疗愈课程</td>
+                        <td class="course-desc">芳香植物疗愈课程涵盖精油提取、配方调制、植物能量特性研究，教授学员如何利用植物芳香物质平衡身心，激活自愈力量。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-hands-praying"></i></td>
+                        <td class="course-name">冥想正念引导师课程</td>
+                        <td class="course-desc">冥想正念引导师课程系统教授东西方冥想技术、脑科学研究成果及指导方法，培养学员成为正念减压与意识探索的专业引导者。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-yin-yang"></i></td>
+                        <td class="course-name">能量平衡高级课程</td>
+                        <td class="course-desc">能量平衡高级课程融合传统能量医学与现代生物场理论，教授脉轮平衡、气场净化、能量传导等技术，提升学员的能量感知与调控能力。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-hands"></i></td>
+                        <td class="course-name">手诊手疗技术课程</td>
+                        <td class="course-desc">手诊手疗技术课程结合中医经络学说与现代手部反射区理论，教授通过手部诊断健康状况并运用特定手法改善身体机能的实用技术。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-sun"></i></td>
+                        <td class="course-name">阳光疗愈指导师</td>
+                        <td class="course-desc">阳光疗愈指导师课程讲解阳光对人体的生理心理影响，结合色彩光谱疗法，教授如何科学利用阳光改善情绪，提升免疫力和生命能量。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-apple-whole"></i></td>
+                        <td class="course-name">营养与食疗指导</td>
+                        <td class="course-desc">营养与食疗指导师课程系统讲解食物能量学和功能营养学，教授如何运用食物特性平衡身体，并为不同体质设计个性化膳食方案。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-draw-circle"></i></td>
+                        <td class="course-name">艺术表达疗愈课程</td>
+                        <td class="course-desc">艺术表达疗愈课程综合绘画、雕塑、戏剧等艺术形式，引导学员通过创作过程表达内心，整合情感，发现自我，促进心灵成长。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-feather"></i></td>
+                        <td class="course-name">羽毛能量疗愈课程</td>
+                        <td class="course-desc">羽毛能量疗愈课程传授古老的羽毛清理技术，结合能量医学原理，教授如何利用不同鸟类羽毛的振动特性清理气场，平衡脉轮能量。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-pen-nib"></i></td>
+                        <td class="course-name">写作疗愈引导师</td>
+                        <td class="course-desc">写作疗愈引导师课程教授表达性写作技巧与指导方法，帮助学员掌握如何通过文字表达释放情绪，整合创伤，重塑自我叙事。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-dice"></i></td>
+                        <td class="course-name">塔罗牌解读课程</td>
+                        <td class="course-desc">塔罗牌解读师课程深入讲解78张塔罗牌的象征意义与解读系统，结合心理学原理，教授学员如何运用塔罗进行人生指引与心灵探索。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-fire-flame-curved"></i></td>
+                        <td class="course-name">生命之火点燃课程</td>
+                        <td class="course-desc">生命之火点燃课程以能量唤醒为核心，结合呼吸技术与意识引导，帮助学员激活内在潜能，点燃生命动力，创造充满活力的人生。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-eye"></i></td>
+                        <td class="course-name">直觉开发与训练</td>
+                        <td class="course-desc">直觉开发与训练课程通过特定练习激活第六感知能力，结合量子物理学与意识研究，教授学员如何增强直觉感知，做出更明智的决策。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-moon"></i></td>
+                        <td class="course-name">月亮周期疗愈课程</td>
+                        <td class="course-desc">月亮周期疗愈课程教授月相变化与人体生理心理关系，结合古老月亮仪式与现代能量工作，帮助学员调整生活节奏，增强女性能量。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-person-walking"></i></td>
+                        <td class="course-name">身心整合运动课程</td>
+                        <td class="course-desc">身心整合运动课程结合东方太极、瑜伽与西方体感训练，教授如何通过特定动作与呼吸模式增强身体觉察，促进意识与身体连接。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-wand-magic-sparkles"></i></td>
+                        <td class="course-name">花精疗愈高级课程</td>
+                        <td class="course-desc">花精疗愈高级课程讲解花精制作原理与不同花卉的能量特性，教授如何通过花精调和情绪，平衡能量场，实现内在和谐与转化。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-house-chimney-user"></i></td>
+                        <td class="course-name">空间能量清理课程</td>
+                        <td class="course-desc">空间能量清理课程传授古今能量净化技术，包括香熏、声音、元素调用等方法，教导学员如何清理家居或工作环境的负面能量，创造和谐空间。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-ghost"></i></td>
+                        <td class="course-name">前世回溯引导课程</td>
+                        <td class="course-desc">前世回溯引导课程教授进入前世记忆的安全引导技术，结合潜意识沟通方法，帮助学员探索过去生命经验，疗愈今生的情感模式。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                    <tr>
+                        <td class="course-icon"><i class="fas fa-crown"></i></td>
+                        <td class="course-name">灵性导师培训课程</td>
+                        <td class="course-desc">灵性导师培训课程为有志于成为心灵引导者的学员提供系统训练，涵盖冥想指导、能量工作、生命智慧传递等核心能力培养。</td>
+                        <td class="course-action"><a href="https://krbem.xetlk.com/s/30LJpW" class="btn-details" target="_blank">立即报名</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        
+        <footer>
+            <div class="footer-links">
+                <a href="../about-us.html"><i class="fas fa-info-circle"></i> 关于我们</a>
+                <a href="../contact.html"><i class="fas fa-envelope"></i> 联系我们</a>
+                <a href="#"><i class="fas fa-link"></i> 友情链接</a>
+            </div>
+            <p>© 2025 玄学测试算命导航网 | <a href="../index.html">www.xxtest.com</a></p>
+            <p>本站提供多种心灵成长与自我提升课程</p>
+        </footer>
+    </div>
+    
+    <script>
+        // 添加按钮点击动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.btn-details');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // 创建涟漪效果
+                    const ripple = document.createElement('span');
+                    this.appendChild(ripple);
+                    
+                    // 设置涟漪位置
+                    const x = e.clientX - this.getBoundingClientRect().left;
+                    const y = e.clientY - this.getBoundingClientRect().top;
+                    
+                    ripple.style.cssText = `
+                        position: absolute;
+                        background: rgba(255, 255, 255, 0.7);
+                        border-radius: 50%;
+                        pointer-events: none;
+                        width: 100px;
+                        height: 100px;
+                        left: ${x - 50}px;
+                        top: ${y - 50}px;
+                        transform: scale(0);
+                        opacity: 1;
+                        animation: ripple 0.6s linear;
+                    `;
+                    
+                    // 清除涟漪效果
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        });
+        
+        // 添加涟漪动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(3);
+                    opacity: 0;
+                }
+            }
+            
+            .btn-details {
+                position: relative;
+                overflow: hidden;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html> 
