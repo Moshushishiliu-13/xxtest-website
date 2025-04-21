@@ -3,1319 +3,730 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>玄学测试算命导航网</title>
-    <!-- SEO元标签 -->
-    <meta name="description" content="专业的玄学网站导航，提供占卜预测、风水堪舆等多种玄学资源链接。">
-    <meta name="keywords" content="玄学导航,占卜,算命,风水,玄学网站,周易,八字,命理">
-    <!-- 引入外部CSS文件 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- 引入FontAwesome图标库 -->
+    <title>前途测试免费算命导航网 - 新版</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 引入Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?c9baea25d725c559af7804b843e66556";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         :root {
-            --primary-color: #9b59b6;          /* 深紫色 */
-            --secondary-color: #3a6ea5;        /* 深蓝色 */
-            --text-color: #e0e0e0;             /* 浅灰白色文字 */
-            --dark-bg: #121212;                /* 近黑色背景 */
-            --card-bg: #1e1e2d;                /* 深蓝灰卡片背景 */
-            --hover-color: #252538;            /* 悬停色 */
-            --shadow: 0 4px 15px rgba(0,0,0,0.3); /* 深色阴影 */
-            --transition: all 0.3s ease;
-            --accent-color: #c0392b;           /* 暗红色点缀 */
-            --golden: #d4af37;                 /* 金色点缀 */
-            --gradient-start: #6a0572;         /* 渐变起始色 */
-            --gradient-end: #2d0036;           /* 渐变结束色 */
-            --text-secondary: #b3b3b3;         /* 次要文字颜色 */
-            
-            /* 新增分类主题颜色 */
-            --divination-color: #9b59b6;       /* 占卜预测-紫色 */
-            --divination-grad: linear-gradient(45deg, #8e44ad, #9b59b6);
-            --divination-border: #8e44ad;
-            
-            --course-color: #27ae60;           /* 课程咨询-绿色 */
-            --course-grad: linear-gradient(45deg, #219653, #27ae60);
-            --course-border: #219653;
-            
-            --custom-color: #e67e22;           /* 定制商品-橙色 */
-            --custom-grad: linear-gradient(45deg, #d35400, #e67e22);
-            --custom-border: #d35400;
+            /* 神秘玄学风格配色系统 */
+            --divination-color: #9B59D6;      /* 神秘紫色 */
+            --course-color: #50C878;          /* 翡翠绿色 */
+            --custom-color: #FFD700;          /* 金色 */
+            --primary-color: #8A2BE2;         /* 紫罗兰色 */
+            --text-color: #483D8B;            /* 暗蓝色文字 */
+            --text-secondary: #6A5ACD;        /* 次要紫色文字 */
+            --background-color: #F8F4FF;      /* 浅紫色背景 */
+            --card-bg: #FFFFFF;               /* 卡片背景色 */
+            --shadow: 0 8px 30px rgba(138,43,226,0.2); /* 紫色阴影 */
         }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
-            font-family: 'Microsoft YaHei', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-color);
-            background-image: linear-gradient(145deg, var(--gradient-start), var(--gradient-end));
-            min-height: 100vh;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .container {
-            width: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
+            background-color: var(--background-color);
+            background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        header {
-            background-color: var(--card-bg);
-            padding: clamp(15px, 5vw, 25px);
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            margin-bottom: clamp(15px, 3vw, 25px);
             position: relative;
-            overflow: visible;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-color);
+            line-height: 1.5;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: -1px;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-        }
-        
         h1 {
-            color: var(--golden);
-            margin-bottom: clamp(10px, 3vw, 20px);
             text-align: center;
-            font-size: clamp(1.5rem, 5vw, 2.5rem);
-            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
-            letter-spacing: 1px;
-            line-height: 1.3;
-            padding: 0 10px;
-            overflow-wrap: break-word;
-            hyphens: auto;
-        }
-        
-        h1 i {
-            font-size: clamp(1.2rem, 4vw, 1.8rem);
-            margin: 0 5px;
+            margin: 20px 0 30px;
             color: var(--primary-color);
-            text-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
-            display: inline-block;
-        }
-        
-        .search-box {
-            display: flex;
-            gap: 10px;
-            max-width: 500px;
-            margin: 0 auto;
-            width: 100%;
-        }
-        
-        .search-box input {
-            flex: 1;
-            padding: clamp(8px, 2vw, 12px) clamp(10px, 3vw, 15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            font-size: clamp(14px, 2vw, 16px);
-            transition: var(--transition);
-            background-color: rgba(255, 255, 255, 0.05);
-            color: var(--text-color);
-        }
-        
-        .search-box input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(155, 89, 182, 0.2);
-            background-color: rgba(255, 255, 255, 0.08);
-        }
-        
-        .search-box input::placeholder {
-            color: rgba(255, 255, 255, 0.3);
-        }
-        
-        .search-box button {
-            padding: clamp(8px, 2vw, 12px) clamp(15px, 3vw, 25px);
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: bold;
-            box-shadow: var(--shadow);
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-        }
-        
-        .search-box button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(155, 89, 182, 0.3);
-        }
-        
-        .search-box button i {
-            font-size: 0.85em;
-            margin-right: 5px;
-        }
-        
-        main {
-            display: flex;
-            flex-direction: column;
-            gap: clamp(15px, 3vw, 25px);
-            flex: 1;
-            margin-bottom: 25px;
-        }
-        
-        .categories {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            background: transparent;
-            box-shadow: none;
-            border: none;
-            padding: 0;
-        }
-        
-        .category {
-            flex: 1;
-            min-width: 280px;
-            margin-bottom: 0;
-            position: relative;
-            padding-bottom: 8px;
-        }
-        
-        .category:last-child {
-            margin-bottom: 0;
-        }
-        
-        .category h2 {
-            color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            position: relative;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-        }
-        
-        .category h2 i {
-            font-size: 0.8em;
-            margin-right: 5px;
-            color: var(--golden);
-            text-shadow: 0 0 3px rgba(212, 175, 55, 0.3);
-        }
-        
-        .category h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            height: 2px;
-            bottom: -1px;
-            width: 80px;
-        }
-        
-        .sites {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            gap: 6px;
-            padding: 5px 0;
-            scrollbar-width: thin;
-            scrollbar-color: var(--primary-color) rgba(0,0,0,0.1);
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        .site-card {
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 1px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-            border-left: 2px solid transparent;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            min-width: 86px;
-            max-width: 100px;
-            flex: 0 0 auto;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .site-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-        }
-        
-        .site-card.active {
-            border-left: 3px solid var(--accent-color);
-            background-color: rgba(192, 57, 43, 0.1);
-        }
-        
-        .site-card h3 {
-            color: var(--text-color);
-            margin-bottom: 1px;
+            text-shadow: 1px 1px 2px rgba(138,43,226,0.2);
+            animation: fadeInDown 1s;
+            font-size: 2.4rem;
             font-weight: 600;
-            font-size: 0.7rem;
-            letter-spacing: 0;
-            line-height: 1.2;
+            letter-spacing: -0.015em;
+            position: relative;
+            overflow: hidden;
         }
-        
-        .site-card h3 i {
-            font-size: 0.7em;
-            margin-right: 2px;
-            color: var(--golden);
-            opacity: 0.9;
+        h2 {
+            text-align: left;
+            margin: 20px 0 15px;
+            color: var(--primary-color);
+            animation: fadeIn 1.5s;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
         }
-        
-        .site-card p {
+        .content-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+            animation: fadeIn 1s;
+        }
+        .divination-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+            height: auto;
+            min-height: 50px;
+            overflow: hidden;
+            background-color: rgba(155, 89, 214, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(155, 89, 214, 0.3);
+            box-shadow: 0 4px 15px rgba(155, 89, 214, 0.1);
+        }
+        .course-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+            height: 200px;
+            overflow: auto;
+            background-color: rgba(80, 200, 120, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(80, 200, 120, 0.3);
+            box-shadow: 0 4px 15px rgba(80, 200, 120, 0.1);
+        }
+        .custom-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+            height: auto;
+            min-height: 50px;
+            overflow: hidden;
+            background-color: rgba(255, 215, 0, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
+        }
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 15px;
+            font-size: 15px;
+            transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+        .divination-links a {
+            color: var(--divination-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            background-color: rgba(155, 89, 214, 0.05);
+        }
+        .divination-links a:hover {
+            color: #fff;
+            background-color: var(--divination-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(155, 89, 214, 0.3);
+        }
+        .course-links a {
+            color: var(--course-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            background-color: rgba(80, 200, 120, 0.05);
+        }
+        .course-links a:hover {
+            color: #fff;
+            background-color: var(--course-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(80, 200, 120, 0.3);
+        }
+        .custom-links a {
+            color: var(--custom-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            background-color: rgba(255, 215, 0, 0.05);
+        }
+        .custom-links a:hover {
+            color: #483D8B;
+            background-color: var(--custom-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+        }
+        i {
+            margin-right: 8px;
+        }
+        footer {
+            margin-top: 60px;
+            text-align: center;
             color: var(--text-secondary);
-            font-size: 0.6rem;
-            margin-left: 3px;
-            margin-top: 0;
-            margin-bottom: 1px;
-            line-height: 1.1;
+            padding: 20px 0;
+            border-top: 1px solid rgba(138,43,226,0.1);
+            animation: fadeIn 2s;
+            background-color: rgba(248, 244, 255, 0.8);
         }
-        
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.6;
+        }
         .preview-container {
-            background-color: var(--card-bg);
-            padding: clamp(15px, 3vw, 25px);
+            background-color: white;
             border-radius: 12px;
             box-shadow: var(--shadow);
-            position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 30px;
+            height: 600px;
+            overflow: hidden;
+            animation: fadeInUp 1.2s;
+            border: 1px solid rgba(138,43,226,0.1);
+        }
+        .preview-header {
+            background-color: rgba(138,43,226,0.03);
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(138,43,226,0.1);
             display: flex;
-            flex-direction: column;
-            height: 100%;
-            min-height: 500px;
+            justify-content: space-between;
+            align-items: center;
         }
-        
-        .preview-info {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .preview-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 15px;
+        }
+        .preview-actions {
+            display: flex;
+            gap: 15px;
+        }
+        .preview-actions button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
             color: var(--text-secondary);
-            font-size: clamp(14px, 3vw, 16px);
-            text-align: center;
-            z-index: 1;
+            transition: all 0.2s ease;
         }
-        
+        .preview-actions button:hover {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
         #preview-frame {
             width: 100%;
-            flex: 1;
+            height: calc(100% - 45px);
             border: none;
-            border-radius: 10px;
-            position: relative;
-            z-index: 2;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-            transition: var(--transition);
-            background-color: white;
-            min-height: 350px;
         }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes glow {
-            0%, 100% { text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
-            50% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
-        }
-        
-        h1, h1 i {
-            animation: glow 3s infinite;
-        }
-        
-        .category, .site-card {
-            animation: fadeIn 0.5s ease forwards;
-        }
-        
-        .site-card:nth-child(2) { animation-delay: 0.1s; }
-        .site-card:nth-child(3) { animation-delay: 0.2s; }
-        .site-card:nth-child(4) { animation-delay: 0.3s; }
-        .site-card:nth-child(5) { animation-delay: 0.4s; }
-        .site-card:nth-child(6) { animation-delay: 0.5s; }
-        
-        footer {
-            text-align: center;
-            padding: clamp(10px, 2vw, 15px) 0;
+        .preview-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 45px);
             color: var(--text-secondary);
-            font-size: clamp(12px, 2vw, 14px);
-            background-color: rgba(0, 0, 0, 0.3);
+            font-size: 16px;
+            background-color: #FAFAFA;
+        }
+        /* 滚动条美化 */
+        .course-links::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .course-links::-webkit-scrollbar-track {
+            background: rgba(138,43,226,0.05);
             border-radius: 10px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            width: 100%;
-            margin-top: auto;
-            position: relative;
-            z-index: 10;
+        }
+        .course-links::-webkit-scrollbar-thumb {
+            background-color: rgba(138,43,226,0.2);
+            border-radius: 10px;
+        }
+        .course-links::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(138,43,226,0.4);
+        }
+        
+        /* 页脚样式优化 */
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0;
         }
         
         .footer-links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: clamp(15px, 3vw, 25px);
-            margin-bottom: clamp(10px, 2vw, 15px);
+            gap: 30px;
+            margin-bottom: 15px;
         }
         
         .footer-links a {
-            color: var(--text-color);
+            color: var(--text-secondary);
             text-decoration: none;
-            transition: var(--transition);
-            font-size: clamp(13px, 2vw, 15px);
-            letter-spacing: 0.3px;
-        }
-        
-        .footer-links a i {
-            font-size: 0.9em;
-            margin-right: 5px;
-            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
         }
         
         .footer-links a:hover {
-            color: var(--golden);
-        }
-
-        footer a {
             color: var(--primary-color);
+        }
+        
+        .footer-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            text-align: left;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 16px;
+            position: relative;
+            padding-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 1px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-section p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: var(--text-secondary);
             text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
         }
         
-        footer a:hover {
-            text-decoration: underline;
-            color: var(--golden);
+        .footer-section a:hover {
+            color: var(--primary-color);
         }
         
-        @media (max-width: 1024px) {
-            .categories {
-                flex-direction: column;
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(138,43,226,0.1);
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+        
+        /* 响应式设计增强 */
+        @media (max-width: 992px) {
+            body {
+                padding: 15px;
             }
             
-            .category {
-                width: 100%;
-                margin-bottom: 20px;
+            h1 {
+                font-size: 2rem;
+                margin: 15px 0 20px;
             }
             
-            .category:last-child {
-                margin-bottom: 0;
+            .preview-container {
+                height: 500px;
             }
             
-            .sites {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            .footer-info {
+                gap: 30px;
             }
         }
         
         @media (max-width: 768px) {
-            main {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+                margin: 15px 0;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+            
+            .preview-container {
+                height: 400px;
+            }
+            
+            .footer-section {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .footer-info {
                 flex-direction: column;
-            }
-            
-            .categories {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-            
-            .sites {
-                grid-template-columns: 1fr;
-            }
-
-            #particle-container {
-                display: none;
-            }
-            
-            footer {
-                margin-top: 30px;
-            }
-            
-            .container {
-                padding-bottom: 20px;
-            }
-            
-            .site-card {
-                min-width: 86px;
-                max-width: 100px;
-            }
-            
-            .category {
-                padding: 12px;
-            }
-            
-            .category h2 {
-                font-size: 1rem;
-                margin-bottom: 12px;
-            }
-            
-            .category.divination, .category.courses, .category.custom {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .category.divination h2, .category.courses h2, .category.custom h2 {
-                margin-bottom: 15px;
-                width: 100%;
+                gap: 0;
             }
         }
         
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.4rem;
-                letter-spacing: 0;
+                font-size: 1.5rem;
             }
             
-            h1 i {
-                font-size: 1.1rem;
-                margin: 0 3px;
+            .divination-links, .custom-links {
+                height: auto;
+                padding: 10px;
             }
             
-            .search-box {
+            a {
+                margin-bottom: 8px;
+            }
+            
+            .preview-container {
+                height: 350px;
+            }
+            
+            .footer-links {
                 flex-direction: column;
-            }
-            
-            .search-box button {
-                width: 100%;
-            }
-            
-            .site-card h3 {
-                font-size: 0.95rem;
-            }
-            
-            .site-card p {
-                font-size: 12px;
-                margin-left: 12px;
-            }
-            
-            header {
-                padding: 12px;
+                gap: 15px;
+                align-items: center;
             }
         }
         
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text-color: #f0f0f0;
-                --text-secondary: #c5c5c5;
-            }
+        /* 添加动画 */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         
-        @media (orientation: landscape) and (max-width: 900px) {
-            main {
-                grid-template-columns: 300px 1fr;
-            }
-            
-            #preview-frame {
-                min-height: 300px;
-            }
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px rgba(138,43,226,0.5); }
+            50% { text-shadow: 0 0 20px rgba(138,43,226,0.8); }
+            100% { text-shadow: 0 0 5px rgba(138,43,226,0.5); }
         }
         
-        @media (prefers-contrast: high) {
-            :root {
-                --primary-color: #7d4a96;
-                --secondary-color: #2e5784;
-            }
+        .site-link:active {
+            animation: pulse 0.3s;
         }
         
-        @media (min-resolution: 2dppx) {
-            .site-card, .categories, .preview-container {
-                border-radius: 14px;
-            }
+        h1 i {
+            animation: glow 3s infinite;
+            color: #FFD700;
         }
         
-        html, body {
-            scroll-behavior: smooth;
-            scrollbar-width: thin;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            z-index: 100;
-            overflow-y: auto;
-            animation: fadeIn 0.3s;
-        }
-
-        .modal-content {
-            background-color: var(--card-bg);
-            margin: 5% auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            max-width: 800px;
+        /* 点击特效 */
+        .site-link.clicked {
+            animation: pulse 0.5s;
             position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            color: var(--text-secondary);
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .close-btn:hover {
-            color: var(--golden);
-            transform: scale(1.1);
-        }
-
-        .modal-title {
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .modal-title::after {
+        
+        .site-link.clicked::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: ripple 0.7s ease-out;
+            z-index: 1;
+        }
+        
+        @keyframes ripple {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+            }
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+            }
+        }
+        
+        /* 神秘标题效果 */
+        h1::before, h1::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 50px;
             height: 2px;
-            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            background: linear-gradient(90deg, rgba(138,43,226,0), rgba(138,43,226,0.8) 50%, rgba(255,215,0,0.8));
         }
-
-        .course-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+        
+        h1::before {
+            left: -60px;
+            transform: translateY(-50%);
+            animation: slideInLeft 2s forwards 0.5s;
         }
-
-        .course-option {
-            background-color: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: var(--transition);
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+        
+        h1::after {
+            right: -60px;
+            transform: translateY(-50%) rotate(180deg);
+            animation: slideInRight 2s forwards 0.5s;
         }
-
-        .course-option:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--primary-color);
+        
+        @keyframes slideInLeft {
+            to { left: 20%; }
         }
-
-        .course-img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            background-color: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--golden);
-        }
-
-        .course-info {
-            padding: 15px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .course-name {
-            color: var(--golden);
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .course-desc {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            flex-grow: 1;
-        }
-
-        .course-price {
-            color: var(--accent-color);
-            font-weight: bold;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-
-        .course-btn-container {
-            width: 50%;
-            height: 20px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .course-btn {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            width: 50%;
-            height: 18px;
-            font-size: 0.7rem;
-            padding: 0 8px;
-            transform: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .course-btn:hover {
-            box-shadow: 0 2px 4px rgba(155, 89, 182, 0.4);
-            transform: translateY(-1px);
-        }
-
-        @media (max-width: 768px) {
-            .course-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .modal-content {
-                margin: 10% 15px;
-                padding: 20px;
-            }
-            
-            .course-img {
-                height: 150px;
-            }
-        }
-
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .sites {
-                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .sites {
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-                gap: 15px;
-            }
-            
-            .site-card:hover {
-                transform: translateY(-5px) scale(1.02);
-            }
-        }
-
-        @media (min-width: 768px) {
-            main {
-                grid-template-columns: 1fr;
-            }
-            
-            .category-item {
-                margin-bottom: 10px;
-            }
-            
-            .site-cards {
-                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .site-cards {
-                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            }
-            
-            .container {
-                padding: 30px;
-            }
-        }
-
-        /* 隐藏滚动条但保持可滚动 */
-        .sites::-webkit-scrollbar {
-            height: 6px;
-        }
-
-        .sites::-webkit-scrollbar-track {
-            background: rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
-
-        .sites::-webkit-scrollbar-thumb {
-            background-color: var(--primary-color);
-            border-radius: 10px;
-        }
-
-        /* 添加滚动指示和滚动箭头 */
-        .scroll-hint {
-            position: absolute;
-            bottom: 5px;
-            right: 15px;
-            background-color: rgba(0, 0, 0, 0.3);
-            color: white;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-weight: 500;
-        }
-
-        /* 修改占卜预测栏目布局为标题和卡片在同一行 */
-        .category.divination {
-            display: flex;
-            align-items: center;
-            flex-wrap: nowrap;
-        }
-
-        .category.divination h2 {
-            white-space: nowrap;
-            margin-right: 15px;
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-            flex-shrink: 0;
-            width: auto;
-            min-width: 120px;
-        }
-
-        .category.divination h2::after {
-            display: none;
-        }
-
-        .category.divination .sites-container {
-            flex: 1;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .category.divination .sites {
-            width: 100%;
-        }
-
-        .category.divination .scroll-hint {
-            bottom: -5px;
-            right: 0;
-        }
-
-        /* 修改课程和咨询栏目布局为标题和卡片在同一行 */
-        .category.courses {
-            display: flex;
-            align-items: center;
-            flex-wrap: nowrap;
-        }
-
-        .category.courses h2 {
-            white-space: nowrap;
-            margin-right: 15px;
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-            flex-shrink: 0;
-            width: auto;
-            min-width: 120px;
-        }
-
-        .category.courses h2::after {
-            display: none;
-        }
-
-        .category.courses .sites-container {
-            flex: 1;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .category.courses .sites {
-            width: 100%;
-        }
-
-        .category.courses .scroll-hint {
-            bottom: -5px;
-            right: 0;
-        }
-
-        /* 修改定制商品栏目布局为标题和卡片在同一行 */
-        .category.custom {
-            display: flex;
-            align-items: center;
-            flex-wrap: nowrap;
-        }
-
-        .category.custom h2 {
-            white-space: nowrap;
-            margin-right: 15px;
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-            flex-shrink: 0;
-            width: auto;
-            min-width: 120px;
-        }
-
-        .category.custom h2::after {
-            display: none;
-        }
-
-        .category.custom .sites-container {
-            flex: 1;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .category.custom .sites {
-            width: 100%;
-        }
-
-        .category.custom .scroll-hint {
-            bottom: -5px;
-            right: 0;
-        }
-
-        /* 修改栏目背景色 */
-        .category.divination {
-            background: linear-gradient(to right, rgba(155, 89, 182, 0.2), rgba(155, 89, 182, 0.1));
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--divination-color);
-        }
-
-        .category.courses {
-            background: linear-gradient(to right, rgba(39, 174, 96, 0.2), rgba(39, 174, 96, 0.1));
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--course-color);
-        }
-
-        .category.custom {
-            background: linear-gradient(to right, rgba(230, 126, 34, 0.2), rgba(230, 126, 34, 0.1));
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--custom-color);
-        }
-
-        /* 添加回被移除的分类样式 */
-        /* 修改每个分类的样式 */
-        .category.divination h2 {
-            color: var(--divination-color);
-        }
-
-        .category.divination h2 i {
-            color: white;
-            text-shadow: 0 0 5px rgba(155, 89, 182, 0.8);
-        }
-
-        .category.divination h2::after {
-            background: var(--divination-grad);
-            display: none; /* 对于占卜预测栏目，仍然隐藏下划线 */
-        }
-
-        .category.divination .site-card:hover {
-            border-left: 3px solid var(--divination-color);
-            box-shadow: 0 5px 15px rgba(155, 89, 182, 0.2);
-        }
-
-        .category.divination .site-card h3 i {
-            color: var(--divination-color);
-        }
-
-        .category.courses h2 {
-            color: var(--course-color);
-        }
-
-        .category.courses h2 i {
-            color: white;
-            text-shadow: 0 0 5px rgba(39, 174, 96, 0.8);
-        }
-
-        .category.courses h2::after {
-            background: var(--course-grad);
-            display: none;  /* 对于课程和咨询栏目，也隐藏下划线 */
-        }
-
-        .category.courses .site-card:hover {
-            border-left: 3px solid var(--course-color);
-            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.2);
-        }
-
-        .category.courses .site-card h3 i {
-            color: var(--course-color);
-        }
-
-        .category.custom h2 {
-            color: var(--custom-color);
-        }
-
-        .category.custom h2 i {
-            color: white;
-            text-shadow: 0 0 5px rgba(230, 126, 34, 0.8);
-        }
-
-        .category.custom h2::after {
-            background: var(--custom-grad);
-        }
-
-        .category.custom .site-card:hover {
-            border-left: 3px solid var(--custom-color);
-            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.2);
-        }
-
-        .category.custom .site-card h3 i {
-            color: var(--custom-color);
-        }
-
-        /* 调整滚动提示颜色 */
-        .category.divination .scroll-hint {
-            background-color: rgba(155, 89, 182, 0.2);
-            color: var(--divination-color);
-            bottom: -5px;
-            right: 0;
-        }
-
-        .category.courses .scroll-hint {
-            background-color: rgba(39, 174, 96, 0.2);
-            color: var(--course-color);
-            bottom: -5px;
-            right: 0;
-        }
-
-        .category.custom .scroll-hint {
-            background-color: rgba(230, 126, 34, 0.2);
-            color: var(--custom-color);
-        }
-
-        /* 调整站点卡片背景 */
-        .category.divination .site-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
-        .category.courses .site-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
-        .category.custom .site-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+        
+        @keyframes slideInRight {
+            to { right: 20%; }
         }
     </style>
 </head>
 <body>
-    <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+    <div id="particles-js"></div>
     
-    <div id="bazi-modal" class="modal">
-        <div class="modal-content">
-            <span id="close-bazi-modal" class="close-btn">&times;</span>
-            <h2 class="modal-title"><i class="fas fa-graduation-cap"></i> 选择八字课程</h2>
-            <div class="course-grid">
-                <div class="course-option" data-url="https://krbem.xetlk.com/s/3eGNj5">
-                    <img src="images/dummy_bazi.svg" alt="匠叔玄学商业大师汇" class="course-img">
-                    <div class="course-info">
-                        <h3 class="course-name">匠叔玄学商业大师汇</h3>
-                        <p class="course-desc">专业八字命理系统课程，从基础到商业应用的完整学习体系。</p>
-                        <div class="course-price">精品课程</div>
-                        <div class="course-btn-container">
-                            <button class="course-btn">立即学习</button>
-                        </div>
-                    </div>
+    <h1><i class="fas fa-moon"></i> 前途测试免费算命导航网 <i class="fas fa-star"></i></h1>
+    
+    <div class="content-wrap">
+        <h2><i class="fas fa-magic"></i> 占卜预测</h2>
+        <div class="divination-links">
+            <a href="https://almuten.net/" data-url="https://almuten.net/" class="site-link">
+                <i class="fas fa-star"></i> 宫神星网
+            </a>
+            <a href="https://www.buyiju.com/suangua/" data-url="https://www.buyiju.com/suangua/" class="site-link">
+                <i class="fas fa-dice"></i> 每日一测
+            </a>
+            <a href="https://www.buyiju.com/cm/cezi/" data-url="https://www.buyiju.com/cm/cezi/" class="site-link">
+                <i class="fas fa-book"></i> 周易测字算命
+            </a>
+            <a href="https://www.buyiju.com/bazi/" data-url="https://www.buyiju.com/bazi/" class="site-link">
+                <i class="fas fa-calendar-alt"></i> 生辰八字算命
+            </a>
+            <a href="https://www.buyiju.com/cgsm/" data-url="https://www.buyiju.com/cgsm/" class="site-link">
+                <i class="fas fa-balance-scale"></i> 称骨算命
+            </a>
+            <a href="https://xmcs.buyiju.com/" data-url="https://xmcs.buyiju.com/" class="site-link">
+                <i class="fas fa-user"></i> 姓名测试打分
+            </a>
+            <a href="https://www.buyiju.com/guanyin/" data-url="https://www.buyiju.com/guanyin/" class="site-link">
+                <i class="fas fa-pray"></i> 观音灵签
+            </a>
+        </div>
+        
+        <h2><i class="fas fa-compass"></i> 课程和咨询</h2>
+        <div class="course-links">
+            <a href="https://krbem.xetlk.com/s/3eGNj5" data-url="https://krbem.xetlk.com/s/3eGNj5" class="site-link">
+                <i class="fas fa-graduation-cap"></i> 匠叔玄学商业大师汇
+            </a>
+            <a href="https://krbem.xetlk.com/s/4C5eZX" data-url="https://krbem.xetlk.com/s/4C5eZX" class="site-link">
+                <i class="fas fa-graduation-cap"></i> 匠叔八字商业大师高阶课
+            </a>
+            <a href="https://krbem.xetlk.com/s/18JAQD" data-url="https://krbem.xetlk.com/s/18JAQD" class="site-link">
+                <i class="fas fa-graduation-cap"></i> 匠叔玄学头像商业课
+            </a>
+            <a href="https://krbem.xetlk.com/s/1UvrBA" data-url="https://krbem.xetlk.com/s/1UvrBA" class="site-link">
+                <i class="fas fa-graduation-cap"></i> 八字商业大师课闭环班
+            </a>
+            <a href="https://krbem.xetlk.com/s/29zSCF" data-url="https://krbem.xetlk.com/s/29zSCF" class="site-link">
+                <i class="fas fa-graduation-cap"></i> 一小时学会小六壬
+            </a>
+            <a href="https://krbem.xetlk.com/s/3K9pmv" data-url="https://krbem.xetlk.com/s/3K9pmv" class="site-link">
+                <i class="fas fa-gem"></i> 玄学水晶商业陪跑
+            </a>
+            <a href="https://krbem.xetlk.com/s/4EzRMV" data-url="https://krbem.xetlk.com/s/4EzRMV" class="site-link">
+                <i class="fas fa-chess-board"></i> 30天轻松学奇门
+            </a>
+
+            <!-- 国际疗愈协会课程 -->
+            <a href="#" data-url="国际疗愈协会课程/OH卡牌疗愈课程.html" class="site-link">
+                <i class="fas fa-spa"></i> OH卡牌疗愈课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/生命认识觉醒课程.html" class="site-link">
+                <i class="fas fa-seedling"></i> 生命认识觉醒课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/灵气疗愈课程.html" class="site-link">
+                <i class="fas fa-hands-holding-heart"></i> 灵气疗愈课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/曼陀罗疗愈课程.html" class="site-link">
+                <i class="fas fa-moon"></i> 曼陀罗疗愈课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/家庭婚姻情感疗愈.html" class="site-link">
+                <i class="fas fa-home"></i> 家庭婚姻情感疗愈
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/催眠疗愈课程.html" class="site-link">
+                <i class="fas fa-brain"></i> 催眠疗愈课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/心理倾听疗愈课程.html" class="site-link">
+                <i class="fas fa-headphones"></i> 心理倾听疗愈课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/沙盘游戏疗愈师课程.html" class="site-link">
+                <i class="fas fa-child"></i> 沙盘游戏疗愈师课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/家庭教育指导.html" class="site-link">
+                <i class="fas fa-chalkboard-teacher"></i> 家庭教育指导
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/音乐疗愈技术课程.html" class="site-link">
+                <i class="fas fa-music"></i> 音乐疗愈技术课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/芳香植物疗愈课程.html" class="site-link">
+                <i class="fas fa-leaf"></i> 芳香植物疗愈课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/冥想正念引导师课程.html" class="site-link">
+                <i class="fas fa-yin-yang"></i> 冥想正念引导师课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/能量平衡高级课程.html" class="site-link">
+                <i class="fas fa-balance-scale"></i> 能量平衡高级课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/手诊手疗技术课程.html" class="site-link">
+                <i class="fas fa-hand-holding-medical"></i> 手诊手疗技术课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/阳光疗愈指导师.html" class="site-link">
+                <i class="fas fa-sun"></i> 阳光疗愈指导师
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/营养与食疗指导.html" class="site-link">
+                <i class="fas fa-utensils"></i> 营养与食疗指导
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/艺术表达疗愈课程.html" class="site-link">
+                <i class="fas fa-paint-brush"></i> 艺术表达疗愈课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/羽毛能量疗愈课程.html" class="site-link">
+                <i class="fas fa-feather"></i> 羽毛能量疗愈课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/写作疗愈引导师.html" class="site-link">
+                <i class="fas fa-pen"></i> 写作疗愈引导师
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/塔罗牌解读课程.html" class="site-link">
+                <i class="fas fa-puzzle-piece"></i> 塔罗牌解读课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/生命之火点燃课程.html" class="site-link">
+                <i class="fas fa-fire"></i> 生命之火点燃课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/直觉开发与训练.html" class="site-link">
+                <i class="fas fa-brain"></i> 直觉开发与训练
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/月亮周期疗愈课程.html" class="site-link">
+                <i class="fas fa-moon"></i> 月亮周期疗愈课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/身心整合运动课程.html" class="site-link">
+                <i class="fas fa-running"></i> 身心整合运动课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/花精疗愈高级课程.html" class="site-link">
+                <i class="fas fa-spa"></i> 花精疗愈高级课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/空间能量清理课程.html" class="site-link">
+                <i class="fas fa-broom"></i> 空间能量清理课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/前世回溯引导课程.html" class="site-link">
+                <i class="fas fa-sync"></i> 前世回溯引导课程
+            </a>
+            <a href="#" data-url="国际疗愈协会课程/灵性导师培训课程.html" class="site-link">
+                <i class="fas fa-users"></i> 灵性导师培训课程
+            </a>
+        </div>
+        
+        <h2><i class="fas fa-gift"></i> 定制商品</h2>
+        <div class="custom-links">
+            <a href="contact.html" data-url="contact.html" class="site-link">
+                <i class="fas fa-tshirt"></i> 开光护身符
+            </a>
+            <a href="contact.html" data-url="contact.html" class="site-link">
+                <i class="fas fa-gem"></i> 能量水晶
+            </a>
+            <a href="contact.html" data-url="contact.html" class="site-link">
+                <i class="fas fa-ring"></i> 转运饰品
+            </a>
+            <a href="contact.html" data-url="contact.html" class="site-link">
+                <i class="fas fa-book"></i> 命理解析书
+            </a>
+        </div>
+        
+        <div class="preview-container">
+            <div class="preview-header">
+                <div class="preview-title">页面预览</div>
+                <div class="preview-actions">
+                    <button id="open-new-tab"><i class="fas fa-external-link-alt"></i></button>
+                    <button id="refresh-preview"><i class="fas fa-sync"></i></button>
                 </div>
-                <div class="course-option" data-url="https://krbem.xetlk.com/s/4C5eZX">
-                    <img src="images/dummy_bazi.svg" alt="匠叔八字商业大师 | 高阶课" class="course-img">
-                    <div class="course-info">
-                        <h3 class="course-name">匠叔八字商业大师 | 高阶课</h3>
-                        <p class="course-desc">深入学习八字命理高级应用，提升实战分析能力，掌握商业化运作方法。</p>
-                        <div class="course-price">高阶课程</div>
-                        <div class="course-btn-container">
-                            <button class="course-btn">立即学习</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="course-option" data-url="https://krbem.xetlk.com/s/18JAQD">
-                    <img src="images/dummy_bazi.svg" alt="匠叔玄学头像商业课" class="course-img">
-                    <div class="course-info">
-                        <h3 class="course-name">匠叔玄学头像商业课</h3>
-                        <p class="course-desc">专注头像分析技巧，学习从面相看人生八字，提升直观判断能力。</p>
-                        <div class="course-price">特色课程</div>
-                        <div class="course-btn-container">
-                            <button class="course-btn">立即学习</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="course-option" data-url="https://krbem.xetlk.com/s/1UvrBA">
-                    <img src="images/dummy_bazi.svg" alt="匠叔八字商业大师课【经典闭环班】" class="course-img">
-                    <div class="course-info">
-                        <h3 class="course-name">匠叔八字商业大师课【经典闭环班】</h3>
-                        <p class="course-desc">系统完整的八字商业应用课程，闭环教学确保学以致用。</p>
-                        <div class="course-price">经典班</div>
-                        <div class="course-btn-container">
-                            <button class="course-btn">立即学习</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="course-option" data-url="https://krbem.xetlk.com/s/29zSCF">
-                    <img src="images/dummy_bazi.svg" alt="1小时学会运势占卜小六壬" class="course-img">
-                    <div class="course-info">
-                        <h3 class="course-name">1小时学会运势占卜小六壬</h3>
-                        <p class="course-desc">快速建立信任专用，简单易学的占卜技巧，短时间内掌握实用预测方法。</p>
-                        <div class="course-price">入门课程</div>
-                        <div class="course-btn-container">
-                            <button class="course-btn">立即学习</button>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <iframe id="preview-frame" src="about:blank" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+            <div class="preview-message" id="preview-message">
+                <p>点击上方链接查看内容预览</p>
             </div>
         </div>
     </div>
     
-    <div class="container">
-        <header class="animate__animated animate__fadeInDown">
-            <h1><i class="fas fa-moon"></i> 玄学测试算命导航网 <i class="fas fa-star"></i></h1>
-            <div class="search-box">
-                <input type="text" placeholder="搜索网站...">
-                <button><i class="fas fa-search"></i> 搜索</button>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about-us.html"><i class="fas fa-info-circle"></i> 关于我们</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> 联系我们</a>
+                <a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a>
+                <a href="terms.html"><i class="fas fa-file-contract"></i> 使用条款</a>
             </div>
-        </header>
-        
-        <main>
-            <div class="categories animate__animated animate__fadeInUp">
-                <div class="category divination">
-                    <h2><i class="fas fa-magic"></i> 占卜预测</h2>
-                    <div class="sites-container">
-                        <div class="sites">
-                            <div class="site-card" data-url="https://almuten.net/">
-                                <h3><i class="fas fa-star"></i> 宫神星网</h3>
-                                <p>线上古典占星图</p>
-                            </div>
-                            <div class="site-card" data-url="https://www.buyiju.com/suangua/">
-                                <h3><i class="fas fa-dice"></i> 每日一测</h3>
-                                <p>卜易居免费算卦</p>
-                            </div>
-                            <div class="site-card" data-url="https://www.buyiju.com/cm/cezi/">
-                                <h3><i class="fas fa-book"></i> 周易测字算命</h3>
-                                <p>输入汉字占卜吉凶祸福</p>
-                            </div>
-                            <div class="site-card" data-url="https://www.buyiju.com/bazi/">
-                                <h3><i class="fas fa-calendar-alt"></i> 生辰八字算命</h3>
-                                <p>专业的生辰八字命理分析</p>
-                            </div>
-                            <div class="site-card" data-url="https://www.buyiju.com/cgsm/">
-                                <h3><i class="fas fa-balance-scale"></i> 称骨算命</h3>
-                                <p>袁天罡称骨算命法</p>
-                            </div>
-                            <div class="site-card" data-url="https://xmcs.buyiju.com/">
-                                <h3><i class="fas fa-user"></i> 姓名测试打分</h3>
-                                <p>五格姓名学分析</p>
-                            </div>
-                            <div class="site-card" data-url="https://www.buyiju.com/guanyin/">
-                                <h3><i class="fas fa-pray"></i> 观音灵签</h3>
-                                <p>在线抽签占卜</p>
-                            </div>
-                        </div>
-                        <div class="scroll-hint"><i class="fas fa-arrow-right"></i> 滑动查看更多</div>
-                    </div>
+            
+            <div class="footer-info">
+                <div class="footer-section">
+                    <h3>网站介绍</h3>
+                    <p>前途测试免费算命导航网是一个集合各类占卜、测算、命理学习资源的专业平台。我们致力于为用户提供优质、免费的测算工具和学习资源，帮助大家更好地了解自己，预测未来。</p>
                 </div>
                 
-                <div class="category courses">
-                    <h2><i class="fas fa-compass"></i> 课程和咨询</h2>
-                    <div class="sites-container">
-                        <div class="sites">
-                            <div class="site-card" id="bazi-course-card">
-                                <h3><i class="fas fa-graduation-cap"></i> 八字课程</h3>
-                                <p>专业八字命理基础与进阶</p>
-                            </div>
-                            <div class="site-card" data-url="https://krbem.xetlk.com/s/3K9pmv">
-                                <h3><i class="fas fa-gem"></i> 匠叔玄学水晶商业陪跑（了了师姐陪跑）</h3>
-                                <p>水晶能量应用与疗法</p>
-                            </div>
-                            <div class="site-card" data-url="https://krbem.xetlk.com/s/4EzRMV">
-                                <h3><i class="fas fa-chess-board"></i> 30天轻松学奇门</h3>
-                                <p>古法奇门遁甲入门与实战</p>
-                            </div>
-                            <div class="site-card" data-url="contact.html">
-                                <h3><i class="fas fa-hand-holding-heart"></i> 疗愈课程</h3>
-                                <p>能量疗愈与身心平衡</p>
-                            </div>
-                            <div class="site-card" data-url="https://krbem.xetlk.com/s/3CucOD">
-                                <h3><i class="fas fa-brain"></i> 心理咨询师</h3>
-                                <p>专业心理咨询师培训</p>
-                            </div>
-                            <div class="site-card" data-url="contact.html">
-                                <h3><i class="fas fa-user-tie"></i> 咨询老师</h3>
-                                <p>专业玄学导师一对一咨询</p>
-                            </div>
-                            <div class="site-card" data-url="contact.html">
-                                <h3><i class="fas fa-calendar-check"></i> 线下培训预约</h3>
-                                <p>实体课程与面授预约</p>
-                            </div>
-                        </div>
-                        <div class="scroll-hint"><i class="fas fa-arrow-right"></i> 滑动查看更多</div>
-                    </div>
-                </div>
-                
-                <div class="category custom">
-                    <h2><i class="fas fa-gift"></i> 定制商品</h2>
-                    <div class="sites-container">
-                        <div class="sites">
-                            <div class="site-card" data-url="contact.html">
-                                <h3><i class="fas fa-tshirt"></i> 开光护身符</h3>
-                                <p>个人专属开光护身饰品</p>
-                            </div>
-                            <div class="site-card" data-url="contact.html">
-                                <h3><i class="fas fa-gem"></i> 能量水晶</h3>
-                                <p>专业调配能量水晶组合</p>
-                            </div>
-                            <div class="site-card" data-url="contact.html">
-                                <h3><i class="fas fa-ring"></i> 转运饰品</h3>
-                                <p>个人命理定制转运首饰</p>
-                            </div>
-                            <div class="site-card" data-url="contact.html">
-                                <h3><i class="fas fa-book"></i> 命理解析书</h3>
-                                <p>个人专属八字命盘解析</p>
-                            </div>
-                        </div>
-                        <div class="scroll-hint"><i class="fas fa-arrow-right"></i> 滑动查看更多</div>
-                    </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><i class="fab fa-weixin"></i> 课程联系 | 微信联系匠叔：jjjiang826</li>
+                        <li><i class="fab fa-weixin"></i> 商务联系 | 微信联系猫姐：moshushishiliu</li>
+                    </ul>
                 </div>
             </div>
             
-            <div class="preview-container animate__animated animate__fadeInUp">
-                <div id="preview-info" class="preview-info">点击上方卡片查看预览</div>
-                <iframe id="preview-frame" src="about:blank" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+            <div class="copyright">
+                <p>© 2025 前途测试免费算命导航网 | 所有权利保留</p>
+                <div class="friend-links" style="margin-top: 15px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="https://www.buyiju.com" target="_blank" style="color: var(--text-secondary); font-size: 12px;">步易居</a>
+                    <a href="https://www.xingzuo360.cn" target="_blank" style="color: var(--text-secondary); font-size: 12px;">星座运势网</a>
+                    <a href="https://www.sina.com.cn/astro/" target="_blank" style="color: var(--text-secondary); font-size: 12px;">新浪星座</a>
+                    <a href="https://www.qimen.org.cn" target="_blank" style="color: var(--text-secondary); font-size: 12px;">奇门遁甲网</a>
+                </div>
             </div>
-        </main>
-        
-        <footer>
-            <div class="footer-links">
-                <a href="about-us.html"><i class="fas fa-info-circle"></i> ✨ 玄学工作室 | Mysticism Studio ✨</a>
-                <a href="contact.html"><i class="fas fa-envelope"></i> 联系我们</a>
-                <a href="#"><i class="fas fa-link"></i> 友情链接</a>
-            </div>
-            <p>© 2025 玄学测试算命导航网 | <a href="index.html">www.xxtest.com</a></p>
-        </footer>
-    </div>
-    
+        </div>
+    </footer>
+
+    <!-- 粒子效果JS -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const siteCards = document.querySelectorAll('.site-card');
-            const previewFrame = document.getElementById('preview-frame');
-            const searchInput = document.querySelector('.search-box input');
-            const searchButton = document.querySelector('.search-box button');
-            const previewInfo = document.getElementById('preview-info');
-            const baziModal = document.getElementById('bazi-modal');
-            const closeBaziModal = document.getElementById('close-bazi-modal');
-
-            siteCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    if (this.id === 'bazi-course-card') {
-                        console.log('八字课程卡片被点击');
-                        baziModal.style.display = 'block';
-                        return;
-                    }
-                    
-                    const url = this.getAttribute('data-url');
-                    
-                    if (url && (
-                        url === 'https://krbem.xetlk.com/s/3K9pmv' ||
-                        url === 'https://krbem.xetlk.com/s/4EzRMV' ||
-                        url === 'https://krbem.xetlk.com/s/3CucOD'
-                    )) {
-                        window.open(url, '_blank');
-                        return;
-                    }
-                    
-                    previewFrame.style.display = 'none';
-                    previewInfo.style.display = 'none';
-                    
-                    if (url) {
-                        previewFrame.style.display = 'block';
-                        try {
-                            previewFrame.src = url;
-                        } catch (error) {
-                            previewInfo.textContent = '该网站不允许在框架中显示，请直接访问网站';
-                            previewInfo.style.display = 'block';
-                        }
-                    }
-                    
-                    siteCards.forEach(c => c.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-
-            function performSearch() {
-                const searchTerm = searchInput.value.toLowerCase();
-                siteCards.forEach(card => {
-                    const title = card.querySelector('h3').textContent.toLowerCase();
-                    const description = card.querySelector('p').textContent.toLowerCase();
-                    const isVisible = title.includes(searchTerm) || description.includes(searchTerm);
-                    card.style.display = isVisible ? 'block' : 'none';
-                });
-            }
-
-            searchButton.addEventListener('click', performSearch);
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    performSearch();
-                }
-            });
-            
+            // 初始化粒子效果
             particlesJS('particles-js', {
                 "particles": {
                     "number": {
-                        "value": 100,
+                        "value": 80,
                         "density": {
                             "enable": true,
-                            "value_area": 800
+                            "value_area": 1000
                         }
                     },
                     "color": {
-                        "value": ["#9b59b6", "#3a6ea5", "#d4af37"]
+                        "value": ["#9B59D6", "#8A2BE2", "#FFD700", "#483D8B", "#50C878"]
                     },
                     "shape": {
                         "type": ["circle", "star", "triangle"],
@@ -1328,7 +739,7 @@
                         }
                     },
                     "opacity": {
-                        "value": 0.5,
+                        "value": 0.4,
                         "random": true,
                         "anim": {
                             "enable": true,
@@ -1338,7 +749,7 @@
                         }
                     },
                     "size": {
-                        "value": 3,
+                        "value": 4,
                         "random": true,
                         "anim": {
                             "enable": true,
@@ -1350,20 +761,20 @@
                     "line_linked": {
                         "enable": true,
                         "distance": 150,
-                        "color": "#9b59b6",
-                        "opacity": 0.3,
+                        "color": "#8A2BE2",
+                        "opacity": 0.2,
                         "width": 1
                     },
                     "move": {
                         "enable": true,
-                        "speed": 2,
+                        "speed": 0.8,
                         "direction": "none",
                         "random": true,
                         "straight": false,
                         "out_mode": "out",
                         "bounce": false,
                         "attract": {
-                            "enable": false,
+                            "enable": true,
                             "rotateX": 600,
                             "rotateY": 1200
                         }
@@ -1374,7 +785,7 @@
                     "events": {
                         "onhover": {
                             "enable": true,
-                            "mode": "bubble"
+                            "mode": "repulse"
                         },
                         "onclick": {
                             "enable": true,
@@ -1386,18 +797,18 @@
                         "grab": {
                             "distance": 140,
                             "line_linked": {
-                                "opacity": 1
+                                "opacity": 0.5
                             }
                         },
                         "bubble": {
-                            "distance": 150,
-                            "size": 5,
+                            "distance": 400,
+                            "size": 6,
                             "duration": 2,
                             "opacity": 8,
                             "speed": 3
                         },
                         "repulse": {
-                            "distance": 200,
+                            "distance": 150,
                             "duration": 0.4
                         },
                         "push": {
@@ -1410,66 +821,61 @@
                 },
                 "retina_detect": true
             });
-
-            closeBaziModal.addEventListener('click', function() {
-                baziModal.style.display = 'none';
-            });
             
-            window.addEventListener('click', function(e) {
-                if (e.target === baziModal) {
-                    baziModal.style.display = 'none';
-                }
-            });
+            // 处理链接点击
+            const siteLinks = document.querySelectorAll('.site-link');
+            const previewFrame = document.getElementById('preview-frame');
+            const previewMessage = document.getElementById('preview-message');
+            const openNewTabBtn = document.getElementById('open-new-tab');
+            const refreshPreviewBtn = document.getElementById('refresh-preview');
             
-            const courseOptions = document.querySelectorAll('.course-option');
-            courseOptions.forEach(option => {
-                option.addEventListener('click', function(e) {
-                    if (e.target.classList.contains('course-btn')) {
-                        return;
-                    }
+            let currentUrl = '';
+            
+            siteLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
                     const url = this.getAttribute('data-url');
-                    if (url) {
+                    currentUrl = url;
+                    
+                    // 添加点击特效
+                    this.classList.add('clicked');
+                    setTimeout(() => this.classList.remove('clicked'), 500);
+                    
+                    // 检查是否是课程链接（以krbem开头的链接或者在course-links容器内的国际疗愈协会课程）
+                    const isCourseLink = url.startsWith('https://krbem') || 
+                                       (this.closest('.course-links') && url.includes('国际疗愈协会课程'));
+                    
+                    if(isCourseLink) {
+                        // 课程链接直接在新窗口打开
                         window.open(url, '_blank');
+                    } else if(url) {
+                        // 其他链接在预览框架中显示
+                        previewMessage.style.display = 'none';
+                        previewFrame.style.display = 'block';
+                        
+                        try {
+                            previewFrame.src = url;
+                        } catch(error) {
+                            previewMessage.innerHTML = '<p>该网站不允许在框架中显示，请点击上方按钮在新标签页中打开</p>';
+                            previewMessage.style.display = 'flex';
+                            previewFrame.style.display = 'none';
+                        }
                     }
                 });
             });
             
-            const courseButtons = document.querySelectorAll('.course-btn');
-            courseButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const url = this.closest('.course-option').getAttribute('data-url');
-                    if (url) {
-                        window.open(url, '_blank');
-                    }
-                });
-            });
-
-            // 添加滚动提示控制
-            const sitesContainers = document.querySelectorAll('.sites');
-            const scrollHints = document.querySelectorAll('.scroll-hint');
-            
-            // 检查每个容器是否需要显示滚动提示
-            sitesContainers.forEach((container, index) => {
-                if(container.scrollWidth <= container.clientWidth) {
-                    // 内容没有溢出，隐藏滚动提示
-                    if(scrollHints[index]) {
-                        scrollHints[index].style.display = 'none';
-                    }
+            // 在新标签页打开
+            openNewTabBtn.addEventListener('click', function() {
+                if(currentUrl) {
+                    window.open(currentUrl, '_blank');
                 }
-                
-                // 监听滚动事件
-                container.addEventListener('scroll', function() {
-                    // 如果滚动到接近末尾，隐藏提示
-                    if(this.scrollLeft + this.clientWidth >= this.scrollWidth - 50) {
-                        if(scrollHints[index]) {
-                            scrollHints[index].style.opacity = '0';
-                        }
-                    } else {
-                        if(scrollHints[index]) {
-                            scrollHints[index].style.opacity = '0.7';
-                        }
-                    }
-                });
+            });
+            
+            // 刷新预览
+            refreshPreviewBtn.addEventListener('click', function() {
+                if(currentUrl && previewFrame.style.display === 'block') {
+                    previewFrame.src = previewFrame.src;
+                }
             });
         });
     </script>
