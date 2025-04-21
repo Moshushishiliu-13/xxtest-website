@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国际疗愈行业协会课程中心 - 玄学测试算命导航网</title>
+    <!-- SEO元标签 -->
+    <meta name="description" content="国际疗愈行业协会提供专业的疗愈课程，包括OH卡牌疗愈、灵气疗愈、催眠疗愈等多种课程。">
+    <meta name="keywords" content="疗愈课程,OH卡牌,灵气疗愈,催眠疗愈,心理倾听,曼陀罗疗愈">
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- 引入FontAwesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 引入Google字体 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c9baea25d725c559af7804b843e66556";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <style>
+        :root {
+            /* 苹果风格配色系统 */
+            --primary-color: #0066CC;         /* 苹果蓝 */
+            --secondary-color: #404040;       /* 深灰 */
+            --text-color: #1D1D1F;            /* 近黑色文字 */
+            --text-light: #86868B;            /* 浅灰色文字 */
+            --bg-color: #FFFFFF;              /* 白色背景 */
+            --card-bg: #F5F5F7;               /* 超浅灰卡片背景 */
+            --hover-color: #E8E8ED;           /* 悬停色 */
+            --shadow: 0 4px 20px rgba(0,0,0,0.08); /* 轻微阴影 */
+            --transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            --accent-color: #FF453A;          /* 点缀红色 */
+            --golden: #AF9E5A;                /* 金色点缀 */
+            
+            /* 分类主题颜色 - 苹果风格 */
+            --healing-color: #5856D6;         /* 疗愈-紫色 */
+            --healing-grad: linear-gradient(135deg, #5E5CE6, #5856D6);
+            
+            /* 暗色模式支持 */
+            --dark-bg: #000000;               /* 深黑背景 */
+            --dark-card: #1C1C1E;             /* 深色卡片 */
+            --dark-text: #F5F5F7;             /* 亮白文字 */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'SF Pro Display', 'SF Pro Text', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 20px 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin: 20px 0 30px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        h1 {
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        h1 i {
+            font-size: 0.8em;
+            margin: 0 8px;
+            color: var(--primary-color);
+        }
+        
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .back-to-home:hover {
+            color: #0077ED;
+        }
+        
+        .back-to-home i {
+            margin-right: 5px;
+        }
+        
+        main {
+            flex: 1;
+            margin-bottom: 40px;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        
+        .course-card {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--healing-grad);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .course-card:hover::before {
+            opacity: 1;
+        }
+        
+        .course-img {
+            width: 100%;
+            height: 180px;
+            background-color: var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        
+        .course-img i {
+            opacity: 0.8;
+        }
+        
+        .course-content {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .course-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-color);
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+        }
+        
+        .course-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        
+        .course-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: var(--transition);
+            text-align: center;
+            font-size: 0.95rem;
+            margin-top: auto;
+        }
+        
+        .course-btn:hover {
+            background-color: #0077ED;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--text-light);
+            font-size: 14px;
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            width: 100%;
+            margin-top: auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .footer-links a i {
+            font-size: 1em;
+            margin-right: 6px;
+            color: var(--primary-color);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: #0077ED;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .course-card {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        
+        @media (max-width: 768px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header {
+                padding: 20px;
+            }
+            
+            .course-img {
+                height: 160px;
+            }
+        }
+        
+        /* 添加深色模式支持 */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: var(--dark-bg);
+                --card-bg: var(--dark-card);
+                --text-color: var(--dark-text);
+            }
+            
+            body {
+                background-color: var(--dark-bg);
+            }
+            
+            header {
+                background-color: rgba(28, 28, 30, 0.8);
+            }
+            
+            .course-card {
+                background-color: var(--dark-card);
+            }
+            
+            .course-img {
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+            
+            footer {
+                background-color: var(--dark-card);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-spa"></i> 国际疗愈行业协会课程中心</h1>
+            <div class="subtitle">探索身心灵平衡，开启疗愈之旅</div>
+            <a href="../index.html" class="back-to-home"><i class="fas fa-arrow-left"></i>返回主站</a>
+        </header>
+        
+        <main>
+            <div class="course-grid" id="courseContainer">
+                <!-- 课程将通过JavaScript动态加载 -->
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-links">
+                <a href="../about-us.html"><i class="fas fa-info-circle"></i> 关于我们</a>
+                <a href="../contact.html"><i class="fas fa-envelope"></i> 联系我们</a>
+                <a href="#"><i class="fas fa-link"></i> 友情链接</a>
+            </div>
+            <p>© 2025 玄学测试算命导航网 | <a href="../index.html">www.xxtest.com</a></p>
+            <p>内容来源：<a href="https://exam.ihiac.org.cn/" target="_blank">国际疗愈行业协会</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // 加载课程数据
+        fetch('courses.json')
+            .then(response => response.json())
+            .then(data => {
+                const courseContainer = document.getElementById('courseContainer');
+                
+                // 图标映射
+                const iconMap = {
+                    'oh_cards.jpg': 'fas fa-cards-blank',
+                    'life_awakening.jpg': 'fas fa-lightbulb',
+                    'incense_therapy.jpg': 'fas fa-smoke',
+                    'reiki_healing.jpg': 'fas fa-hands-holding-circle',
+                    'mandala_healing.jpg': 'fas fa-mandolin',
+                    'family_therapy.jpg': 'fas fa-people-roof',
+                    'astrology.jpg': 'fas fa-stars',
+                    'gemstone_identification.jpg': 'fas fa-gem',
+                    'hypnotherapy.jpg': 'fas fa-brain',
+                    'psychological_listening.jpg': 'fas fa-ear-listen',
+                    'sandplay_therapy.jpg': 'fas fa-hourglass',
+                    'family_education.jpg': 'fas fa-chalkboard-user'
+                };
+                
+                // 创建课程卡片
+                data.courses.forEach((course, index) => {
+                    const delay = index * 0.05;
+                    const icon = iconMap[course.image] || 'fas fa-spa';
+                    
+                    const courseElement = document.createElement('div');
+                    courseElement.className = 'course-card';
+                    courseElement.style.animationDelay = `${delay}s`;
+                    
+                    courseElement.innerHTML = `
+                        <div class="course-img">
+                            <i class="${icon}"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">${course.name}</h3>
+                            <p class="course-desc">${course.description}</p>
+                            <a href="#" class="course-btn">了解详情</a>
+                        </div>
+                    `;
+                    
+                    courseContainer.appendChild(courseElement);
+                });
+            })
+            .catch(error => {
+                console.error('加载课程数据失败:', error);
+                document.getElementById('courseContainer').innerHTML = '<p style="text-align:center;padding:30px;">加载课程数据失败，请刷新页面重试</p>';
+            });
+    </script>
+</body>
+</html> 
