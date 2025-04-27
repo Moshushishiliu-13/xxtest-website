@@ -1,894 +1,162 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>前途测试免费算命导航网 - 新版</title>
+    <title>神秘塔罗 - 东大塔罗牌在线测试</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>
-        :root {
-            /* 神秘玄学风格配色系统 */
-            --divination-color: #9B59D6;      /* 神秘紫色 */
-            --course-color: #50C878;          /* 翡翠绿色 */
-            --custom-color: #FFD700;          /* 金色 */
-            --primary-color: #8A2BE2;         /* 紫罗兰色 */
-            --text-color: #483D8B;            /* 暗蓝色文字 */
-            --text-secondary: #6A5ACD;        /* 次要紫色文字 */
-            --background-color: #F8F4FF;      /* 浅紫色背景 */
-            --card-bg: #FFFFFF;               /* 卡片背景色 */
-            --shadow: 0 8px 30px rgba(138,43,226,0.2); /* 紫色阴影 */
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: var(--background-color);
-            background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
-            min-height: 100vh;
-            position: relative;
-            color: var(--text-color);
-            line-height: 1.5;
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        h1 {
-            text-align: center;
-            margin: 20px 0 30px;
-            color: var(--primary-color);
-            text-shadow: 1px 1px 2px rgba(138,43,226,0.2);
-            animation: fadeInDown 1s;
-            font-size: 2.4rem;
-            font-weight: 600;
-            letter-spacing: -0.015em;
-            position: relative;
-            overflow: hidden;
-        }
-        h2 {
-            text-align: left;
-            margin: 20px 0 15px;
-            color: var(--primary-color);
-            animation: fadeIn 1.5s;
-            font-size: 1.4rem;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            border-left: 4px solid var(--primary-color);
-            padding-left: 10px;
-        }
-        .content-wrap {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-bottom: 40px;
-            animation: fadeIn 1s;
-        }
-        .divination-links {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 15px;
-            height: auto;
-            min-height: 50px;
-            overflow: hidden;
-            background-color: rgba(155, 89, 214, 0.1);
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(155, 89, 214, 0.3);
-            box-shadow: 0 4px 15px rgba(155, 89, 214, 0.1);
-        }
-        .course-links {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 15px;
-            height: 200px;
-            overflow: auto;
-            background-color: rgba(80, 200, 120, 0.1);
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(80, 200, 120, 0.3);
-            box-shadow: 0 4px 15px rgba(80, 200, 120, 0.1);
-        }
-        .custom-links {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 15px;
-            height: auto;
-            min-height: 50px;
-            overflow: hidden;
-            background-color: rgba(255, 215, 0, 0.1);
-            border-radius: 8px;
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
-        }
-        a {
-            text-decoration: none;
-            font-weight: 500;
-            margin-right: 15px;
-            font-size: 15px;
-            transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-        }
-        .divination-links a {
-            color: var(--divination-color);
-            padding: 5px 10px;
-            border-radius: 4px;
-            background-color: rgba(155, 89, 214, 0.05);
-        }
-        .divination-links a:hover {
-            color: #fff;
-            background-color: var(--divination-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(155, 89, 214, 0.3);
-        }
-        .course-links a {
-            color: var(--course-color);
-            padding: 5px 10px;
-            border-radius: 4px;
-            background-color: rgba(80, 200, 120, 0.05);
-        }
-        .course-links a:hover {
-            color: #fff;
-            background-color: var(--course-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(80, 200, 120, 0.3);
-        }
-        .custom-links a {
-            color: var(--custom-color);
-            padding: 5px 10px;
-            border-radius: 4px;
-            background-color: rgba(255, 215, 0, 0.05);
-        }
-        .custom-links a:hover {
-            color: #483D8B;
-            background-color: var(--custom-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
-        }
-        i {
-            margin-right: 8px;
-        }
-        footer {
-            margin-top: 60px;
-            text-align: center;
-            color: var(--text-secondary);
-            padding: 20px 0;
-            border-top: 1px solid rgba(138,43,226,0.1);
-            animation: fadeIn 2s;
-            background-color: rgba(248, 244, 255, 0.8);
-        }
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.6;
-        }
-        .preview-container {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            margin-top: 30px;
-            height: 600px;
-            overflow: hidden;
-            animation: fadeInUp 1.2s;
-            border: 1px solid rgba(138,43,226,0.1);
-        }
-        .preview-header {
-            background-color: rgba(138,43,226,0.03);
-            padding: 12px 20px;
-            border-bottom: 1px solid rgba(138,43,226,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .preview-title {
-            font-weight: 600;
-            color: var(--primary-color);
-            font-size: 15px;
-        }
-        .preview-actions {
-            display: flex;
-            gap: 15px;
-        }
-        .preview-actions button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            color: var(--text-secondary);
-            transition: all 0.2s ease;
-        }
-        .preview-actions button:hover {
-            color: var(--primary-color);
-            transform: scale(1.1);
-        }
-        #preview-frame {
-            width: 100%;
-            height: calc(100% - 45px);
-            border: none;
-        }
-        .preview-message {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: calc(100% - 45px);
-            color: var(--text-secondary);
-            font-size: 16px;
-            background-color: #FAFAFA;
-        }
-        /* 滚动条美化 */
-        .course-links::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        .course-links::-webkit-scrollbar-track {
-            background: rgba(138,43,226,0.05);
-            border-radius: 10px;
-        }
-        .course-links::-webkit-scrollbar-thumb {
-            background-color: rgba(138,43,226,0.2);
-            border-radius: 10px;
-        }
-        .course-links::-webkit-scrollbar-thumb:hover {
-            background-color: rgba(138,43,226,0.4);
-        }
-        
-        /* 页脚样式优化 */
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-        
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 15px;
-        }
-        
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        .footer-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-            text-align: left;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 15px;
-            color: var(--primary-color);
-            font-size: 16px;
-            position: relative;
-            padding-bottom: 8px;
-            font-weight: 600;
-        }
-        
-        .footer-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 30px;
-            height: 1px;
-            background-color: var(--primary-color);
-        }
-        
-        .footer-section p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--text-secondary);
-        }
-        
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-section li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-section a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-        
-        .footer-section a:hover {
-            color: var(--primary-color);
-        }
-        
-        .copyright {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(138,43,226,0.1);
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-        
-        /* 响应式设计增强 */
-        @media (max-width: 992px) {
-            body {
-                padding: 15px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-                margin: 15px 0 20px;
-            }
-            
-            .preview-container {
-                height: 500px;
-            }
-            
-            .footer-info {
-                gap: 30px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-                margin: 15px 0;
-            }
-            
-            h2 {
-                font-size: 1.2rem;
-            }
-            
-            .preview-container {
-                height: 400px;
-            }
-            
-            .footer-section {
-                min-width: 100%;
-                margin-bottom: 20px;
-            }
-            
-            .footer-info {
-                flex-direction: column;
-                gap: 0;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-            
-            .divination-links, .custom-links {
-                height: auto;
-                padding: 10px;
-            }
-            
-            a {
-                margin-bottom: 8px;
-            }
-            
-            .preview-container {
-                height: 350px;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 15px;
-                align-items: center;
-            }
-        }
-        
-        /* 添加动画 */
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px rgba(138,43,226,0.5); }
-            50% { text-shadow: 0 0 20px rgba(138,43,226,0.8); }
-            100% { text-shadow: 0 0 5px rgba(138,43,226,0.5); }
-        }
-        
-        .site-link:active {
-            animation: pulse 0.3s;
-        }
-        
-        h1 i {
-            animation: glow 3s infinite;
-            color: #FFD700;
-        }
-        
-        /* 点击特效 */
-        .site-link.clicked {
-            animation: pulse 0.5s;
-            position: relative;
-        }
-        
-        .site-link.clicked::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: ripple 0.7s ease-out;
-            z-index: 1;
-        }
-        
-        @keyframes ripple {
-            0% {
-                width: 0;
-                height: 0;
-                opacity: 0.5;
-            }
-            100% {
-                width: 200px;
-                height: 200px;
-                opacity: 0;
-            }
-        }
-        
-        /* 神秘标题效果 */
-        h1::before, h1::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            width: 50px;
-            height: 2px;
-            background: linear-gradient(90deg, rgba(138,43,226,0), rgba(138,43,226,0.8) 50%, rgba(255,215,0,0.8));
-        }
-        
-        h1::before {
-            left: -60px;
-            transform: translateY(-50%);
-            animation: slideInLeft 2s forwards 0.5s;
-        }
-        
-        h1::after {
-            right: -60px;
-            transform: translateY(-50%) rotate(180deg);
-            animation: slideInRight 2s forwards 0.5s;
-        }
-        
-        @keyframes slideInLeft {
-            to { left: 20%; }
-        }
-        
-        @keyframes slideInRight {
-            to { right: 20%; }
-        }
-    </style>
+    <!-- SEO相关元数据 -->
+    <meta name="description" content="免费的在线塔罗牌占卜网站，提供单牌抽取和牌阵解读服务">
+    <meta name="keywords" content="塔罗牌,占卜,神秘塔罗,免费塔罗,牌阵解读">
+    <!-- 百度统计代码 -->
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c74539f43038aa9227519e7b03e462d1";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <!-- 控制爬虫 -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="bingbot" content="noindex, nofollow">
+    <meta name="baidu" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
 </head>
 <body>
-    <div id="particles-js"></div>
-    
-    <h1><i class="fas fa-moon"></i> 前途测试免费算命导航网 <i class="fas fa-star"></i></h1>
-    
-    <div class="content-wrap">
-        <h2><i class="fas fa-magic"></i> 占卜预测</h2>
-        <div class="divination-links">
-            <a href="https://almuten.net/" data-url="https://almuten.net/" class="site-link">
-                <i class="fas fa-star"></i> 宫神星网
-            </a>
-            <a href="https://www.buyiju.com/suangua/" data-url="https://www.buyiju.com/suangua/" class="site-link">
-                <i class="fas fa-dice"></i> 每日一测
-            </a>
-            <a href="https://www.buyiju.com/cm/cezi/" data-url="https://www.buyiju.com/cm/cezi/" class="site-link">
-                <i class="fas fa-book"></i> 周易测字算命
-            </a>
-            <a href="https://www.buyiju.com/bazi/" data-url="https://www.buyiju.com/bazi/" class="site-link">
-                <i class="fas fa-calendar-alt"></i> 生辰八字算命
-            </a>
-            <a href="https://www.buyiju.com/cgsm/" data-url="https://www.buyiju.com/cgsm/" class="site-link">
-                <i class="fas fa-balance-scale"></i> 称骨算命
-            </a>
-            <a href="https://xmcs.buyiju.com/" data-url="https://xmcs.buyiju.com/" class="site-link">
-                <i class="fas fa-user"></i> 姓名测试打分
-            </a>
-            <a href="https://www.buyiju.com/guanyin/" data-url="https://www.buyiju.com/guanyin/" class="site-link">
-                <i class="fas fa-pray"></i> 观音灵签
-            </a>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">神秘塔罗</a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="draw.html">单牌抽取</a></li>
+                    <li><a href="spread.html">牌阵解读</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        
-        <h2><i class="fas fa-compass"></i> 课程和咨询</h2>
-        <div class="course-links">
-            <a href="https://krbem.xetlk.com/s/3eGNj5" data-url="https://krbem.xetlk.com/s/3eGNj5" class="site-link">
-                <i class="fas fa-graduation-cap"></i> 匠叔玄学商业大师汇
-            </a>
-            <a href="https://krbem.xetlk.com/s/4C5eZX" data-url="https://krbem.xetlk.com/s/4C5eZX" class="site-link">
-                <i class="fas fa-graduation-cap"></i> 匠叔八字商业大师高阶课
-            </a>
-            <a href="https://krbem.xetlk.com/s/18JAQD" data-url="https://krbem.xetlk.com/s/18JAQD" class="site-link">
-                <i class="fas fa-graduation-cap"></i> 匠叔玄学头像商业课
-            </a>
-            <a href="https://krbem.xetlk.com/s/1UvrBA" data-url="https://krbem.xetlk.com/s/1UvrBA" class="site-link">
-                <i class="fas fa-graduation-cap"></i> 八字商业大师课闭环班
-            </a>
-            <a href="https://krbem.xetlk.com/s/29zSCF" data-url="https://krbem.xetlk.com/s/29zSCF" class="site-link">
-                <i class="fas fa-graduation-cap"></i> 一小时学会小六壬
-            </a>
-            <a href="https://krbem.xetlk.com/s/3K9pmv" data-url="https://krbem.xetlk.com/s/3K9pmv" class="site-link">
-                <i class="fas fa-gem"></i> 玄学水晶商业陪跑
-            </a>
-            <a href="https://krbem.xetlk.com/s/4EzRMV" data-url="https://krbem.xetlk.com/s/4EzRMV" class="site-link">
-                <i class="fas fa-chess-board"></i> 30天轻松学奇门
-            </a>
-            
-            <!-- 身心灵精品课程 -->
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-spa"></i> OH卡牌疗愈课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-seedling"></i> 生命认识觉醒课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-hands-holding-heart"></i> 灵气疗愈课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-moon"></i> 曼陀罗疗愈课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-home"></i> 家庭婚姻情感疗愈
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-brain"></i> 催眠疗愈课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-headphones"></i> 心理倾听疗愈课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-child"></i> 沙盘游戏疗愈师课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-chalkboard-teacher"></i> 家庭教育指导
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-music"></i> 音乐疗愈技术课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-leaf"></i> 芳香植物疗愈课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-yin-yang"></i> 冥想正念引导师课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-balance-scale"></i> 能量平衡高级课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-hand-holding-medical"></i> 手诊手疗技术课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-sun"></i> 阳光疗愈指导师
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-utensils"></i> 营养与食疗指导
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-paint-brush"></i> 艺术表达疗愈课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-feather"></i> 羽毛能量疗愈课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-pen"></i> 写作疗愈引导师
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-puzzle-piece"></i> 塔罗牌解读课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-fire"></i> 生命之火点燃课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-brain"></i> 直觉开发与训练
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-moon"></i> 月亮周期疗愈课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-running"></i> 身心整合运动课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-spa"></i> 花精疗愈高级课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-broom"></i> 空间能量清理课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-sync"></i> 前世回溯引导课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-users"></i> 灵性导师培训课程
-            </a>
-            <a href="lyxhjingpincouse/login_courses.html" data-url="lyxhjingpincouse/login_courses.html" class="site-link" target="_blank">
-                <i class="fas fa-heart"></i> 身心灵课程全目录
-            </a>
-        </div>
-        
-        <h2><i class="fas fa-gift"></i> 定制商品</h2>
-        <div class="custom-links">
-            <a href="contact.html" data-url="contact.html" class="site-link">
-                <i class="fas fa-tshirt"></i> 开光护身符
-            </a>
-            <a href="contact.html" data-url="contact.html" class="site-link">
-                <i class="fas fa-gem"></i> 能量水晶
-            </a>
-            <a href="contact.html" data-url="contact.html" class="site-link">
-                <i class="fas fa-ring"></i> 转运饰品
-            </a>
-            <a href="contact.html" data-url="contact.html" class="site-link">
-                <i class="fas fa-book"></i> 命理解析书
-            </a>
-        </div>
-        
-        <div class="preview-container">
-            <div class="preview-header">
-                <div class="preview-title">页面预览</div>
-                <div class="preview-actions">
-                    <button id="open-new-tab"><i class="fas fa-external-link-alt"></i></button>
-                    <button id="refresh-preview"><i class="fas fa-sync"></i></button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>探索神秘的塔罗世界</h1>
+                <p>通过塔罗牌的智慧洞察未来，获得生活的指引</p>
+                <div class="hero-buttons">
+                    <a href="draw.html" class="btn btn-primary">开始单牌抽取</a>
+                    <a href="spread.html" class="btn btn-secondary">进行牌阵解读</a>
+                    <button id="favoriteBtn" class="btn btn-favorite" title="使用浏览器快捷键收藏本站">
+                        收藏本站
+                    </button>
                 </div>
             </div>
-            <iframe id="preview-frame" src="about:blank" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
-            <div class="preview-message" id="preview-message">
-                <p>点击上方链接查看内容预览</p>
-            </div>
-        </div>
-    </div>
-    
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="about-us.html"><i class="fas fa-info-circle"></i> 关于我们</a>
-                <a href="contact.html"><i class="fas fa-envelope"></i> 联系我们</a>
-                <a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a>
-                <a href="terms.html"><i class="fas fa-file-contract"></i> 使用条款</a>
-            </div>
-            
-            <div class="footer-info">
-                <div class="footer-section">
-                    <h3>网站介绍</h3>
-                    <p>前途测试免费算命导航网是一个集合各类占卜、测算、命理学习资源的专业平台。我们致力于为用户提供优质、免费的测算工具和学习资源，帮助大家更好地了解自己，预测未来。</p>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>塔罗牌测试服务</h2>
+                <div class="feature-grid">
+                    <a href="draw.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <i class="fas fa-star feature-icon"></i>
+                            <h3>单牌抽取</h3>
+                            <p>适合快速获取指引，回答简单的是非问题</p>
+                        </div>
+                    </a>
+                    <a href="spread.html#three-card" class="feature-card-link">
+                        <div class="feature-card">
+                            <i class="fas fa-moon feature-icon"></i>
+                            <h3>三卡牌阵</h3>
+                            <p>过去、现在、未来的完整视角</p>
+                        </div>
+                    </a>
+                    <a href="spread.html#five-card" class="feature-card-link">
+                        <div class="feature-card">
+                            <i class="fas fa-sun feature-icon"></i>
+                            <h3>万能二选一牌阵</h3>
+                            <p>V字型布局，帮助您在两个选择间做出明智决策</p>
+                        </div>
+                    </a>
+                    <a href="spread.html#celtic-cross" class="feature-card-link">
+                        <div class="feature-card">
+                            <i class="fas fa-compass feature-icon"></i>
+                            <h3>凯尔特十字</h3>
+                            <p>深入解析复杂问题的各个方面</p>
+                        </div>
+                    </a>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>联系我们</h3>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>用户反馈</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <p class="quote">"神秘塔罗帮助我在职业选择上做出了正确的决定，非常准确！"</p>
+                        <p class="author">- 李小姐</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="quote">"网站界面简洁友好，解读详细，给了我很多启发。"</p>
+                        <p class="author">- 张先生</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>神秘塔罗</h3>
+                    <p>您的命运指南</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速链接</h4>
                     <ul>
-                        <li><i class="fab fa-weixin"></i> 课程联系 | 微信联系匠叔：jjjiang826</li>
-                        <li><i class="fab fa-weixin"></i> 商务联系 | 微信联系猫姐：moshushishiliu</li>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="draw.html">单牌抽取</a></li>
+                        <li><a href="spread.html">牌阵解读</a></li>
+                        <li><a href="about.html">关于我们</a></li>
                     </ul>
                 </div>
+                <div class="footer-contact">
+                    <h4>联系我们</h4>
+                    <p>邮箱: contact@eastern-tarot.com</p>
+                </div>
             </div>
             
-            <div class="copyright">
-                <p>© 2025 前途测试免费算命导航网 | 所有权利保留</p>
-                <div class="friend-links" style="margin-top: 15px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                    <a href="https://www.buyiju.com" target="_blank" style="color: var(--text-secondary); font-size: 12px;">步易居</a>
-                    <a href="https://www.xingzuo360.cn" target="_blank" style="color: var(--text-secondary); font-size: 12px;">星座运势网</a>
-                    <a href="https://www.sina.com.cn/astro/" target="_blank" style="color: var(--text-secondary); font-size: 12px;">新浪星座</a>
-                    <a href="https://www.qimen.org.cn" target="_blank" style="color: var(--text-secondary); font-size: 12px;">奇门遁甲网</a>
+            <!-- 新增友情链接区域 -->
+            <div class="footer-friends">
+                <h4>友情链接</h4>
+                <div class="friend-links">
+                    <a href="http://www.xxtest.com" target="_blank" rel="noopener">前途测试免费算命导航网</a>
+                    <a href="http://www.certificate-training.com" target="_blank" rel="noopener">认证培训网</a>
                 </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 神秘塔罗. 保留所有权利.</p>
             </div>
         </div>
     </footer>
 
-    <!-- 粒子效果JS -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // 初始化粒子效果
-            particlesJS('particles-js', {
-                "particles": {
-                    "number": {
-                        "value": 80,
-                        "density": {
-                            "enable": true,
-                            "value_area": 1000
-                        }
-                    },
-                    "color": {
-                        "value": ["#9B59D6", "#8A2BE2", "#FFD700", "#483D8B", "#50C878"]
-                    },
-                    "shape": {
-                        "type": ["circle", "star", "triangle"],
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
-                        },
-                        "polygon": {
-                            "nb_sides": 5
-                        }
-                    },
-                    "opacity": {
-                        "value": 0.4,
-                        "random": true,
-                        "anim": {
-                            "enable": true,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 4,
-                        "random": true,
-                        "anim": {
-                            "enable": true,
-                            "speed": 2,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#8A2BE2",
-                        "opacity": 0.2,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 0.8,
-                        "direction": "none",
-                        "random": true,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": {
-                            "enable": true,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "repulse"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "push"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": {
-                            "distance": 140,
-                            "line_linked": {
-                                "opacity": 0.5
-                            }
-                        },
-                        "bubble": {
-                            "distance": 400,
-                            "size": 6,
-                            "duration": 2,
-                            "opacity": 8,
-                            "speed": 3
-                        },
-                        "repulse": {
-                            "distance": 150,
-                            "duration": 0.4
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        },
-                        "remove": {
-                            "particles_nb": 2
-                        }
-                    }
-                },
-                "retina_detect": true
-            });
-            
-            // 处理链接点击
-            const siteLinks = document.querySelectorAll('.site-link');
-            const previewFrame = document.getElementById('preview-frame');
-            const previewMessage = document.getElementById('preview-message');
-            const openNewTabBtn = document.getElementById('open-new-tab');
-            const refreshPreviewBtn = document.getElementById('refresh-preview');
-            
-            let currentUrl = '';
-            
-            siteLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const url = this.getAttribute('data-url');
-                    currentUrl = url;
-                    
-                    // 添加点击特效
-                    this.classList.add('clicked');
-                    setTimeout(() => this.classList.remove('clicked'), 500);
-                    
-                    // 检查是否是课程链接（以krbem开头的链接或包含特定关键词的链接）
-                    const isCourseLink = url.startsWith('https://krbem') || 
-                                       url.includes('lyxhjingpincouse') || 
-                                       url.includes('OH卡牌疗愈课程') || 
-                                       url.includes('灵气疗愈课程') ||
-                                       url.includes('疗愈');
-                    
-                    if(isCourseLink) {
-                        // 对于疗愈相关课程，统一跳转到课程页面
-                        if(url.includes('OH卡牌疗愈课程') || url.includes('灵气疗愈课程') || url.includes('疗愈')) {
-                            window.open('https://www.xxtest.com/lyxhjingpincouse/login_courses.html', '_blank');
-                        } else {
-                            // 其他课程链接直接在新窗口打开
-                            window.open(this.getAttribute('href'), '_blank');
-                        }
-                    } else if(url) {
-                        // 其他链接在预览框架中显示
-                        previewMessage.style.display = 'none';
-                        previewFrame.style.display = 'block';
-                        
-                        try {
-                            previewFrame.src = url;
-                        } catch(error) {
-                            previewMessage.innerHTML = '<p>该网站不允许在框架中显示，请点击上方按钮在新标签页中打开</p>';
-                            previewMessage.style.display = 'flex';
-                            previewFrame.style.display = 'none';
-                        }
-                    }
-                });
-            });
-            
-            // 在新标签页打开
-            openNewTabBtn.addEventListener('click', function() {
-                if(currentUrl) {
-                    window.open(currentUrl, '_blank');
-                }
-            });
-            
-            // 刷新预览
-            refreshPreviewBtn.addEventListener('click', function() {
-                if(currentUrl && previewFrame.style.display === 'block') {
-                    previewFrame.src = previewFrame.src;
-                }
-            });
-        });
-    </script>
+    <!-- 页面底部添加的悬浮收藏提示 -->
+    <div id="favTip" class="favorite-tip" style="display: none;">
+        <p>💡 提示：按下<span id="keyCommand">Ctrl+D</span>将本站添加到收藏夹</p>
+        <button id="closeTip">✕</button>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
-</html> 
+</html>
